@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tentang Gereja Protestan Maluku (GPM) Syaloom Waimahu.">
+    <meta name="description" content="Kisah Sejarah Gereja Protestan Maluku (GPM) Syaloom Waimahu.">
     <title>Tentang - GPM Syaloom Waimahu</title>
     
     <!-- CSS -->
@@ -30,12 +30,90 @@
             color: var(--text-muted);
             text-align: center;
         }
+
+        /* History Timeline Style */
+        .history-section {
+            padding: 100px 0;
+            background-color: var(--bg-color);
+        }
+
+        .history-title-large {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .history-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6vw;
+            align-items: center;
+            margin-bottom: 120px;
+        }
+
+        .history-block.reverse {
+            direction: rtl;
+        }
+        .history-block.reverse > * {
+            direction: ltr;
+        }
+
+        .history-text-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .history-text-content p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .history-image-wrap {
+            position: relative;
+            border-radius: 1vw;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+        
+        .history-image-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(80%) contrast(1.2); /* Vintage feel */
+            transition: var(--transition-smooth);
+        }
+
+        .history-image-wrap:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .quote-block {
+            text-align: center;
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 60px;
+            background: var(--text-dark);
+            color: var(--bg-color);
+            border-radius: 2vw;
+        }
+
+        .quote-block p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            line-height: 1.6;
+        }
         
         .vision-mission-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10vw;
             margin-top: 100px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding-top: 100px;
         }
         
         .vm-block h2 {
@@ -52,8 +130,11 @@
             margin-bottom: 15px;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
+            .history-block { grid-template-columns: 1fr; gap: 40px; margin-bottom: 80px; }
+            .history-block.reverse { direction: ltr; }
             .vision-mission-grid { grid-template-columns: 1fr; gap: 60px; }
+            .quote-block p { font-size: 1.4rem; }
         }
     </style>
 </head>
@@ -79,12 +160,79 @@
     <div class="container">
         <div class="page-header reveal">
             <h1>Kisah Kami.</h1>
-            <p class="editorial-text">Gereja Protestan Maluku (GPM) Syaloom Waimahu berdiri sebagai wujud panggilan iman masyarakat Waimahu untuk bersekutu dan melayani Tuhan di tengah dinamika zaman.</p>
+            <p class="editorial-text">Dari setetes air mata dan peluh perjuangan di masa lampau, hingga menjadi terang Kristus yang bersinar teguh di tengah masyarakat Waimahu hari ini.</p>
         </div>
 
-        <div class="hero-image-container reveal delay-100" style="height: 60vh;">
-            <img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" alt="Gereja">
-        </div>
+        <!-- Sejarah Narrative -->
+        <section class="history-section">
+            <h2 class="history-title-large reveal">Waimahu di Masa Lampau</h2>
+
+            <!-- Part 1 -->
+            <div class="history-block reveal delay-100">
+                <div class="history-text-content">
+                    <h3>Batu Penjuru & Tiga Mata Air (1973)</h3>
+                    <p>Persiapan pembangunan dimulai dengan penuh harapan. Pada 16 Februari 1973, batu penjuru yang diambil dari tiga mata air diletakkan. Meskipun ada pihak yang berupaya menggagalkan rencana ini dengan mencoba menghalangi rombongan Gubernur dan Panglima, semua niat buruk itu gagal.</p>
+                    <p>Lonceng gereja pun berbunyi mengumpulkan warga. Batu diusung oleh tiga gadis (Leny Tuhusula, Boya Makapuan, dan Baya Leasa), diiringi musik dari Silo. Batu tersebut diletakkan oleh Pendeta M. Alfons (Ketua Klasis) dan tiang bermula dipancang oleh Gubernur bersama Panglima.</p>
+                </div>
+                <div class="history-image-wrap">
+                    <img src="images/Picture1.png" alt="Peletakan Batu Penjuru">
+                </div>
+            </div>
+
+            <!-- Part 2 -->
+            <div class="history-block reverse reveal delay-100">
+                <div class="history-text-content">
+                    <h3>Perpisahan demi Kesucian Ibadah (1974)</h3>
+                    <p>Kedamaian sempat hilang saat perselisihan melanda jemaat. Kelima majelis sektor Waimahu saat itu—Pnt Makapuan, Sms Tuhumury, Sms Tuhusula, Sma Ch Risakotta, dan Sms Janda Gita Salhuteru—harus menerima cemooh dan caci maki dengan tangan terbuka.</p>
+                    <p>Puncaknya pada 13 Januari 1974, terjadi kekacauan yang mencemari kesucian hari Tuhan. Warga Waimahu akhirnya memutuskan untuk berpisah demi menjaga kesucian ibadah. Pada 20 Januari 1974, ibadah pertama sektor Waimahu diadakan dengan haru di gedung muhabet Ebenhaezer dipimpin Pnt. Makapuan.</p>
+                </div>
+                <div class="history-image-wrap">
+                    <img src="images/Picture2.png" alt="Ibadah di Muhabet Ebenhaezer">
+                </div>
+            </div>
+
+            <!-- Part 3 -->
+            <div class="history-block reveal delay-100">
+                <div class="history-text-content">
+                    <h3>Penahanan di Goa Singa (1975)</h3>
+                    <p>Perjuangan semakin berat. Tanggal 5 September 1975, Sdr. Sms Tuhumury dan Koko Makapuan diseret dan ditahan saat sedang melayani. Seperti Daniel di gua singa, mereka dianiaya di sel tahanan hingga tak berdaya.</p>
+                    <p>Di balik jeruji, secarik kertas diselipkan istri di dalam bungkusan nasi bertuliskan: <em>"Nyong, biar mati jangan menyerah!"</em>. Dan setiap pukul 19:00, seluruh jemaat secara serentak berdoa bagi keselamatan mereka.</p>
+                </div>
+                <div class="history-image-wrap">
+                    <img src="images/Picture3.png" alt="Pergumulan Jemaat">
+                </div>
+            </div>
+
+            <!-- Quote Block -->
+            <div class="quote-block reveal delay-100">
+                <p>"Pada pagi subuh sebelum ayam berkokok, seorang petugas polisi datang dan berkata, bersiap kalian berangkat ke Perigi Lima. Sambil berlutut, teriaklah Sms Tuhumury: 'Terpujilah Allah yang menyelamatkan kami!'"</p>
+            </div>
+
+            <!-- Part 4 -->
+            <div class="history-block reverse reveal delay-100">
+                <div class="history-text-content">
+                    <h3>Fajar Kemenangan & Peresmian (1977 - 1980)</h3>
+                    <p>Belenggu itu akhirnya terlepas. Pada 27 Februari 1977, rombongan sakramen berjalan menuju Waimahu, disambut dentangan lonceng gereja 42 kali—melambangkan 42 tahun pergumulan sejak 1935. Hari itu, Sektor Waimahu resmi diakui sebagai Jemaat mandiri GPM.</p>
+                    <p>Perjuangan memuncak pada 16 September 1980, saat gedung gereja baru diresmikan. Batu penjuru yang ada menjadi saksi bisu tetesan air mata dan peluh para pejuang, yang berpesan: <em>"Ukirlah namaku di batu ini supaya semangat kami terus menyala bagi anak cucu kami di negeri ini."</em></p>
+                </div>
+                <div class="history-image-wrap">
+                    <img src="images/Picture7.png" alt="Peresmian Gedung Gereja">
+                </div>
+            </div>
+            
+            <div class="history-block reveal delay-100">
+                <div class="history-image-wrap" style="max-height: 400px; width: 100%; display:flex; gap: 20px;">
+                     <!-- Extra Photos just in a row for documentation -->
+                     <img src="images/Picture4.png" alt="Dokumentasi 4" style="width: 33%; object-fit: cover;">
+                     <img src="images/Picture5.png" alt="Dokumentasi 5" style="width: 33%; object-fit: cover;">
+                     <img src="images/Picture6.png" alt="Dokumentasi 6" style="width: 33%; object-fit: cover;">
+                </div>
+                <div class="history-text-content">
+                    <p style="font-style: italic;">Catatan sejarah ini dikutip dari catatan harian Pnt. Yusuf Makapuan, bukan untuk menyimpan dendam, melainkan agar jemaat masa kini menyadari betapa besarnya kasih dan anugerah Tuhan yang telah menuntun jemaat GPM Syaloom Waimahu.</p>
+                </div>
+            </div>
+
+        </section>
 
         <section class="section">
             <div class="vision-mission-grid">
