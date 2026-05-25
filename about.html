@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tentang Gereja Protestan Maluku (GPM) Syaloom Waimahu. Sejarah, visi misi, dan majelis jemaat.">
+    <title>Tentang Kami - GPM Syaloom Waimahu</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 300px;
+            background: linear-gradient(rgba(13, 44, 84, 0.8), rgba(13, 44, 84, 0.8)), url('images/hero-bg.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .about-content {
+            padding: 80px 0;
+        }
+
+        .vision-mission {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .card {
+            background: var(--bg-color);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .history-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .vision-mission {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i data-lucide="church"></i>
+                GPM <span>Syaloom</span> Waimahu
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html" class="active">Tentang Kami</a></li>
+                    <li><a href="services.html">Jadwal Ibadah</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <h1 class="page-title">Tentang Kami</h1>
+    </div>
+
+    <!-- About Content -->
+    <section class="about-content container">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 60px;">
+            <h2 class="section-title">Sejarah Jemaat</h2>
+            <p class="history-text">
+                Gereja Protestan Maluku (GPM) Syaloom Waimahu berdiri sebagai wujud panggilan iman masyarakat Waimahu untuk bersekutu dan melayani Tuhan. Sejak didirikan, jemaat ini terus bertumbuh dalam kasih karunia Tuhan, melewati berbagai dinamika zaman, dan tetap kokoh sebagai terang di tengah masyarakat.
+            </p>
+            <p class="history-text">
+                Nama "Syaloom" bermakna damai sejahtera, mencerminkan harapan bahwa gereja ini selalu menjadi pembawa damai, kerukunan, dan kasih Kristus bagi seluruh jemaat dan masyarakat di sekitarnya.
+            </p>
+        </div>
+
+        <div class="vision-mission">
+            <div class="card">
+                <h3><i data-lucide="eye" style="color: var(--secondary-color);"></i> Visi</h3>
+                <p class="history-text">
+                    "Menjadi Gereja yang bertumbuh, melayani, dan bersaksi dalam cinta kasih Kristus guna mewujudkan Syaloom Allah di tengah-tengah dunia."
+                </p>
+            </div>
+            <div class="card">
+                <h3><i data-lucide="target" style="color: var(--secondary-color);"></i> Misi</h3>
+                <ul class="history-text" style="list-style-type: disc; padding-left: 20px;">
+                    <li>Meningkatkan kualitas persekutuan, ibadah, dan spiritualitas jemaat.</li>
+                    <li>Memperkuat pendidikan teologi dan pembinaan warga gereja.</li>
+                    <li>Meningkatkan peran pelayanan diakonia bagi mereka yang membutuhkan.</li>
+                    <li>Membangun kehidupan yang rukun, damai, dan toleran.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>GPM Syaloom Waimahu</h3>
+                <p>Gereja Protestan Maluku (GPM) yang melayani jemaat di Waimahu dengan penuh kasih.</p>
+            </div>
+            
+            <div class="footer-links-wrapper">
+                <h4 class="footer-title">Tautan Cepat</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="services.html">Jadwal Ibadah</a></li>
+                    <li><a href="contact.html">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact-wrapper">
+                <h4 class="footer-title">Informasi Kontak</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i data-lucide="map-pin"></i>
+                        <span>Waimahu, Kec. Nusaniwe, Kota Ambon, Maluku</span>
+                    </li>
+                    <li>
+                        <i data-lucide="phone"></i>
+                        <span>(0911) 123456</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 GPM Syaloom Waimahu. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
