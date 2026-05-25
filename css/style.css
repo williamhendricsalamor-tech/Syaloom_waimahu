@@ -152,6 +152,13 @@ header.scrolled {
   color: var(--accent-gold);
 }
 
+.header-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
 .nav-links {
   display: flex;
   gap: 40px;
