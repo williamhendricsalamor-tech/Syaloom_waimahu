@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website Resmi Gereja Protestan Maluku (GPM) Syaloom Waimahu. Informasi jadwal ibadah, pelayanan, dan berita gereja terbaru.">
-    <title>GPM Syaloom Waimahu | Gereja Protestan Maluku</title>
+    <meta name="description" content="Website Resmi Gereja Protestan Maluku (GPM) Syaloom Waimahu.">
+    <title>GPM Syaloom Waimahu</title>
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -18,8 +18,7 @@
     <header>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <i data-lucide="church"></i>
-                GPM <span>Syaloom</span> Waimahu
+                Syaloom<span class="logo-dot">.</span>
             </a>
             
             <button class="mobile-menu-btn">
@@ -29,115 +28,105 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Beranda</a></li>
-                    <li><a href="about.html">Tentang Kami</a></li>
-                    <li><a href="services.html">Jadwal Ibadah</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="services.html">Ibadah</a></li>
                     <li><a href="contact.html">Kontak</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <span class="hero-subtitle">Selamat Datang di</span>
-            <h1 class="hero-title">Gereja Protestan Maluku<br>Jemaat Syaloom Waimahu</h1>
-            <p class="hero-text">"Aku menanam, Apolos menyiram, tetapi Allah yang memberi pertumbuhan." (1 Korintus 3:6)</p>
-            <div class="hero-buttons">
-                <a href="services.html" class="btn btn-primary">Jadwal Ibadah</a>
-                <a href="about.html" class="btn btn-outline">Pelajari Lebih Lanjut</a>
+    <!-- Hero Section (Editorial Style) -->
+    <section class="hero container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="hero-subtitle reveal">Gereja Protestan Maluku</span>
+                <h1 class="hero-title reveal delay-100">
+                    Syaloom<br>
+                    <span>Waimahu.</span>
+                </h1>
+                <p class="hero-text reveal delay-200">Menghadirkan damai sejahtera dan terang Kristus di tengah dunia melalui persekutuan dan pelayanan kasih.</p>
+                
+                <div class="reveal delay-300">
+                    <a href="services.html" class="btn btn-dark">Jadwal Ibadah</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-container reveal delay-200">
+                <img src="images/hero-bg.png" alt="Ibadah Syaloom Waimahu">
             </div>
         </div>
     </section>
 
-    <!-- Info Section (Overlap Cards) -->
-    <section class="info-section container">
-        <div class="info-cards">
-            <!-- Card 1 -->
-            <div class="info-card">
-                <div class="info-icon">
-                    <i data-lucide="calendar-heart"></i>
-                </div>
-                <h3>Ibadah Minggu</h3>
-                <p>Ibadah raya setiap hari Minggu dilaksanakan pada pukul 09:00 WIT. Mari bersama memuji dan memuliakan nama Tuhan.</p>
+    <!-- Minimalist Features -->
+    <section class="section container">
+        <div class="features-grid">
+            <div class="feature-item reveal">
+                <i data-lucide="book-open" size="32" class="feature-icon"></i>
+                <h3>Firman</h3>
+                <p>Mendalami kebenaran Alkitab melalui khotbah dan PA yang mencerahkan pikiran dan jiwa.</p>
             </div>
-            
-            <!-- Card 2 -->
-            <div class="info-card">
-                <div class="info-icon">
-                    <i data-lucide="users"></i>
-                </div>
-                <h3>Pelayanan Kategorial</h3>
-                <p>Ikuti berbagai kegiatan pelayanan untuk anak, pemuda, perempuan, dan laki-laki untuk pertumbuhan rohani bersama.</p>
+            <div class="feature-item reveal delay-100">
+                <i data-lucide="users" size="32" class="feature-icon"></i>
+                <h3>Persekutuan</h3>
+                <p>Membangun persaudaraan sejati yang saling menguatkan dalam suka maupun duka.</p>
             </div>
-            
-            <!-- Card 3 -->
-            <div class="info-card">
-                <div class="info-icon">
-                    <i data-lucide="book-open"></i>
-                </div>
-                <h3>Renungan Harian</h3>
-                <p>Temukan kekuatan baru setiap hari melalui renungan firman Tuhan yang disiapkan oleh para pelayan firman.</p>
+            <div class="feature-item reveal delay-200">
+                <i data-lucide="heart-handshake" size="32" class="feature-icon"></i>
+                <h3>Pelayanan</h3>
+                <p>Mengulurkan tangan bagi sesama sebagai wujud nyata dari kasih Kristus di dunia.</p>
             </div>
         </div>
     </section>
 
-    <!-- About Preview Section -->
-    <section class="section about-preview">
-        <div class="container about-grid">
-            <div class="about-image">
-                <!-- Using placeholder, user will replace with real church inside image -->
-                <img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ibadah GPM Syaloom">
+    <!-- Split Section (About) -->
+    <section class="section">
+        <div class="container split-section">
+            <div class="split-image reveal">
+                <!-- Using high-quality placeholder for editorial look -->
+                <img src="https://images.unsplash.com/photo-1548625361-ecbfcb14f177?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Komunitas Gereja">
             </div>
-            <div class="about-text">
-                <h2>Melayani dengan Kasih,<br>Bertumbuh dalam Iman.</h2>
-                <p>Jemaat GPM Syaloom Waimahu adalah bagian dari keluarga besar Gereja Protestan Maluku yang terus berkomitmen untuk menghadirkan tanda-tanda Kerajaan Allah di tengah dunia.</p>
-                <p>Kami mengundang Anda untuk bergabung dalam persekutuan kami, bertumbuh bersama dalam firman, dan melayani sesama dengan kasih Kristus.</p>
-                <br>
-                <a href="about.html" class="btn btn-primary">Sejarah Kami</a>
+            <div class="split-content reveal delay-100">
+                <h2>Lebih dari sekadar<br>bangunan.</h2>
+                <p class="large-body">GPM Syaloom Waimahu adalah keluarga iman. Tempat di mana setiap individu, dari berbagai generasi, dipanggil untuk bertumbuh bersama dan menemukan tujuan hidup di dalam Tuhan.</p>
+                
+                <a href="about.html" class="btn btn-outline mt-4">Kisah Kami</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <h3>GPM Syaloom Waimahu</h3>
-                <p>Gereja Protestan Maluku (GPM) yang melayani jemaat di Waimahu dengan penuh kasih, merangkul semua generasi untuk bertumbuh dalam iman kepada Yesus Kristus.</p>
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <div class="footer-brand">Syaloom<span class="logo-dot">.</span></div>
+                    <p style="color: rgba(255,255,255,0.6); max-width: 300px;">Gereja Protestan Maluku Jemaat Waimahu. Hadir untuk melayani dengan kasih.</p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Navigasi</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Beranda</a>
+                        <a href="about.html">Tentang</a>
+                        <a href="services.html">Ibadah</a>
+                        <a href="contact.html">Kontak</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer-title">Kunjungi Kami</h4>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.8;">
+                        Waimahu, Kec. Nusaniwe<br>
+                        Kota Ambon, Maluku<br>
+                        (0911) 123456
+                    </p>
+                </div>
             </div>
             
-            <div class="footer-links-wrapper">
-                <h4 class="footer-title">Tautan Cepat</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="about.html">Tentang Kami</a></li>
-                    <li><a href="services.html">Jadwal Ibadah</a></li>
-                    <li><a href="contact.html">Hubungi Kami</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-contact-wrapper">
-                <h4 class="footer-title">Informasi Kontak</h4>
-                <ul class="footer-contact">
-                    <li>
-                        <i data-lucide="map-pin"></i>
-                        <span>Waimahu, Kec. Nusaniwe, Kota Ambon, Maluku</span>
-                    </li>
-                    <li>
-                        <i data-lucide="phone"></i>
-                        <span>(0911) 123456</span>
-                    </li>
-                    <li>
-                        <i data-lucide="mail"></i>
-                        <span>info@syaloom-waimahu.gpm.org</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
+            <div class="footer-bottom">
                 <p>&copy; 2026 GPM Syaloom Waimahu. Hak Cipta Dilindungi.</p>
+                <p>Desain oleh Expert UI/UX Designer</p>
             </div>
         </div>
     </footer>

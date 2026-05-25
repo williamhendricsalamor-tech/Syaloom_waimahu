@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tentang Gereja Protestan Maluku (GPM) Syaloom Waimahu. Sejarah, visi misi, dan majelis jemaat.">
-    <title>Tentang Kami - GPM Syaloom Waimahu</title>
+    <meta name="description" content="Tentang Gereja Protestan Maluku (GPM) Syaloom Waimahu.">
+    <title>Tentang - GPM Syaloom Waimahu</title>
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -12,160 +12,123 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .page-hero {
-            height: 40vh;
-            min-height: 300px;
-            background: linear-gradient(rgba(13, 44, 84, 0.8), rgba(13, 44, 84, 0.8)), url('images/hero-bg.png') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .page-header {
+            padding: 200px 0 100px;
             text-align: center;
-            color: white;
-            margin-top: 70px;
         }
         
-        .page-title {
-            font-size: 3rem;
-            animation: fadeInDown 0.8s ease;
+        .page-header h1 {
+            font-size: clamp(3rem, 7vw, 6rem);
+            margin-bottom: 20px;
         }
-
-        .about-content {
-            padding: 80px 0;
+        
+        .editorial-text {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: var(--text-muted);
+            text-align: center;
         }
-
-        .vision-mission {
+        
+        .vision-mission-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin: 60px 0;
+            gap: 10vw;
+            margin-top: 100px;
         }
-
-        .card {
-            background: var(--bg-color);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--secondary-color);
+        
+        .vm-block h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--text-dark);
+            padding-bottom: 20px;
+            display: inline-block;
         }
-
-        .card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .history-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
+        
+        .vm-block p, .vm-block li {
+            font-size: 1.2rem;
             color: var(--text-muted);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
-
+        
         @media (max-width: 768px) {
-            .vision-mission {
-                grid-template-columns: 1fr;
-            }
+            .vision-mission-grid { grid-template-columns: 1fr; gap: 60px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <i data-lucide="church"></i>
-                GPM <span>Syaloom</span> Waimahu
-            </a>
-            
-            <button class="mobile-menu-btn">
-                <i data-lucide="menu"></i>
-            </button>
-
+            <a href="index.html" class="logo">Syaloom<span class="logo-dot">.</span></a>
+            <button class="mobile-menu-btn"><i data-lucide="menu"></i></button>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Beranda</a></li>
-                    <li><a href="about.html" class="active">Tentang Kami</a></li>
-                    <li><a href="services.html">Jadwal Ibadah</a></li>
+                    <li><a href="about.html" class="active">Tentang</a></li>
+                    <li><a href="services.html">Ibadah</a></li>
                     <li><a href="contact.html">Kontak</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <div class="page-hero">
-        <h1 class="page-title">Tentang Kami</h1>
+    <!-- Content -->
+    <div class="container">
+        <div class="page-header reveal">
+            <h1>Kisah Kami.</h1>
+            <p class="editorial-text">Gereja Protestan Maluku (GPM) Syaloom Waimahu berdiri sebagai wujud panggilan iman masyarakat Waimahu untuk bersekutu dan melayani Tuhan di tengah dinamika zaman.</p>
+        </div>
+
+        <div class="hero-image-container reveal delay-100" style="height: 60vh;">
+            <img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" alt="Gereja">
+        </div>
+
+        <section class="section">
+            <div class="vision-mission-grid">
+                <div class="vm-block reveal">
+                    <h2>Visi</h2>
+                    <p>"Menjadi Gereja yang bertumbuh, melayani, dan bersaksi dalam cinta kasih Kristus guna mewujudkan Syaloom Allah di tengah-tengah dunia."</p>
+                </div>
+                <div class="vm-block reveal delay-100">
+                    <h2>Misi</h2>
+                    <ul style="list-style-type: disc; padding-left: 20px;">
+                        <li>Meningkatkan kualitas persekutuan dan spiritualitas jemaat.</li>
+                        <li>Memperkuat pembinaan warga gereja.</li>
+                        <li>Meningkatkan peran pelayanan diakonia bagi sesama.</li>
+                        <li>Membangun kehidupan yang damai dan toleran.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
-
-    <!-- About Content -->
-    <section class="about-content container">
-        <div style="text-align: center; max-width: 800px; margin: 0 auto 60px;">
-            <h2 class="section-title">Sejarah Jemaat</h2>
-            <p class="history-text">
-                Gereja Protestan Maluku (GPM) Syaloom Waimahu berdiri sebagai wujud panggilan iman masyarakat Waimahu untuk bersekutu dan melayani Tuhan. Sejak didirikan, jemaat ini terus bertumbuh dalam kasih karunia Tuhan, melewati berbagai dinamika zaman, dan tetap kokoh sebagai terang di tengah masyarakat.
-            </p>
-            <p class="history-text">
-                Nama "Syaloom" bermakna damai sejahtera, mencerminkan harapan bahwa gereja ini selalu menjadi pembawa damai, kerukunan, dan kasih Kristus bagi seluruh jemaat dan masyarakat di sekitarnya.
-            </p>
-        </div>
-
-        <div class="vision-mission">
-            <div class="card">
-                <h3><i data-lucide="eye" style="color: var(--secondary-color);"></i> Visi</h3>
-                <p class="history-text">
-                    "Menjadi Gereja yang bertumbuh, melayani, dan bersaksi dalam cinta kasih Kristus guna mewujudkan Syaloom Allah di tengah-tengah dunia."
-                </p>
-            </div>
-            <div class="card">
-                <h3><i data-lucide="target" style="color: var(--secondary-color);"></i> Misi</h3>
-                <ul class="history-text" style="list-style-type: disc; padding-left: 20px;">
-                    <li>Meningkatkan kualitas persekutuan, ibadah, dan spiritualitas jemaat.</li>
-                    <li>Memperkuat pendidikan teologi dan pembinaan warga gereja.</li>
-                    <li>Meningkatkan peran pelayanan diakonia bagi mereka yang membutuhkan.</li>
-                    <li>Membangun kehidupan yang rukun, damai, dan toleran.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <h3>GPM Syaloom Waimahu</h3>
-                <p>Gereja Protestan Maluku (GPM) yang melayani jemaat di Waimahu dengan penuh kasih.</p>
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <div class="footer-brand">Syaloom<span class="logo-dot">.</span></div>
+                    <p style="color: rgba(255,255,255,0.6); max-width: 300px;">Gereja Protestan Maluku Jemaat Waimahu. Hadir untuk melayani dengan kasih.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Navigasi</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Beranda</a>
+                        <a href="about.html">Tentang</a>
+                        <a href="services.html">Ibadah</a>
+                        <a href="contact.html">Kontak</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Kunjungi Kami</h4>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.8;">Waimahu, Kec. Nusaniwe<br>Kota Ambon, Maluku<br>(0911) 123456</p>
+                </div>
             </div>
-            
-            <div class="footer-links-wrapper">
-                <h4 class="footer-title">Tautan Cepat</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="about.html">Tentang Kami</a></li>
-                    <li><a href="services.html">Jadwal Ibadah</a></li>
-                    <li><a href="contact.html">Hubungi Kami</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-contact-wrapper">
-                <h4 class="footer-title">Informasi Kontak</h4>
-                <ul class="footer-contact">
-                    <li>
-                        <i data-lucide="map-pin"></i>
-                        <span>Waimahu, Kec. Nusaniwe, Kota Ambon, Maluku</span>
-                    </li>
-                    <li>
-                        <i data-lucide="phone"></i>
-                        <span>(0911) 123456</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 GPM Syaloom Waimahu. Hak Cipta Dilindungi.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GPM Syaloom Waimahu.</p>
             </div>
         </div>
     </footer>

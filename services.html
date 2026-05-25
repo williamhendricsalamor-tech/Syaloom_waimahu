@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jadwal ibadah dan pelayanan Gereja Protestan Maluku (GPM) Syaloom Waimahu.">
-    <title>Jadwal Ibadah - GPM Syaloom Waimahu</title>
+    <title>Ibadah - GPM Syaloom Waimahu</title>
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -12,216 +12,118 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .page-hero {
-            height: 40vh;
-            min-height: 300px;
-            background: linear-gradient(rgba(13, 44, 84, 0.8), rgba(13, 44, 84, 0.8)), url('images/hero-bg.png') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .page-header {
+            padding: 200px 0 100px;
             text-align: center;
-            color: white;
-            margin-top: 70px;
         }
         
-        .page-title {
-            font-size: 3rem;
-            animation: fadeInDown 0.8s ease;
-        }
-
-        .services-content {
-            padding: 80px 0;
-        }
-
-        .schedule-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 50px;
-            background: var(--bg-color);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-
-        .schedule-table th, .schedule-table td {
-            padding: 20px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-
-        .schedule-table th {
-            background-color: var(--primary-color);
-            color: white;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .schedule-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .schedule-table tr:hover {
-            background-color: #f9fafb;
-        }
-
-        .day-badge {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .pelayanan-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .pelayanan-card {
-            background: var(--glass-bg);
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid #eee;
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .pelayanan-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-color: var(--secondary-color);
-        }
-
-        .pelayanan-icon {
-            color: var(--primary-color);
-            margin-bottom: 15px;
+        .page-header h1 {
+            font-size: clamp(3rem, 7vw, 6rem);
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <i data-lucide="church"></i>
-                GPM <span>Syaloom</span> Waimahu
-            </a>
-            
-            <button class="mobile-menu-btn">
-                <i data-lucide="menu"></i>
-            </button>
-
+            <a href="index.html" class="logo">Syaloom<span class="logo-dot">.</span></a>
+            <button class="mobile-menu-btn"><i data-lucide="menu"></i></button>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Beranda</a></li>
-                    <li><a href="about.html">Tentang Kami</a></li>
-                    <li><a href="services.html" class="active">Jadwal Ibadah</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="services.html" class="active">Ibadah</a></li>
                     <li><a href="contact.html">Kontak</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <div class="page-hero">
-        <h1 class="page-title">Jadwal Ibadah & Pelayanan</h1>
-    </div>
-
-    <!-- Services Content -->
-    <section class="services-content container">
-        <h2 class="section-title">Ibadah Raya</h2>
-        
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Hari</th>
-                    <th>Waktu (WIT)</th>
-                    <th>Jenis Ibadah</th>
-                    <th>Keterangan</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="day-badge">Minggu</span></td>
-                    <td>09:00 - Selesai</td>
-                    <td>Ibadah Minggu Pagi</td>
-                    <td>Ibadah Raya Jemaat (Pakaian Rapi / Nuansa Hitam-Putih/Batik)</td>
-                </tr>
-                <tr>
-                    <td><span class="day-badge">Minggu</span></td>
-                    <td>09:00 - Selesai</td>
-                    <td>Ibadah Sekolah Minggu</td>
-                    <td>Bagi anak-anak dan remaja di sektor masing-masing / gedung gereja.</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2 class="section-title" style="margin-top: 80px;">Wadah Pelayanan Kategorial</h2>
-        <div class="pelayanan-grid">
-            <div class="pelayanan-card">
-                <i data-lucide="users" size="48" class="pelayanan-icon"></i>
-                <h3>Pelayanan Laki-laki</h3>
-                <p style="color: var(--text-muted); margin-top: 10px;">Persekutuan kaum Bapak untuk saling menguatkan dalam peran sebagai kepala keluarga.</p>
-            </div>
-            <div class="pelayanan-card">
-                <i data-lucide="heart-handshake" size="48" class="pelayanan-icon"></i>
-                <h3>Pelayanan Perempuan</h3>
-                <p style="color: var(--text-muted); margin-top: 10px;">Persekutuan kaum Ibu untuk bertumbuh dalam iman dan melayani keluarga dan gereja.</p>
-            </div>
-            <div class="pelayanan-card">
-                <i data-lucide="flame" size="48" class="pelayanan-icon"></i>
-                <h3>Angkatan Muda</h3>
-                <p style="color: var(--text-muted); margin-top: 10px;">AMGPM (Angkatan Muda Gereja Protestan Maluku) wadah pemuda untuk berkarya bagi Kristus.</p>
-            </div>
-            <div class="pelayanan-card">
-                <i data-lucide="baby" size="48" class="pelayanan-icon"></i>
-                <h3>Pelayanan Anak</h3>
-                <p style="color: var(--text-muted); margin-top: 10px;">SAMP (Sekolah Anak dan Remaja) mendidik generasi muda sejak dini dalam pengenalan akan Tuhan.</p>
-            </div>
+    <!-- Content -->
+    <div class="container">
+        <div class="page-header reveal">
+            <h1>Ibadah & Pelayanan.</h1>
         </div>
-    </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="schedule-list">
+                
+                <h2 style="font-size: 2.5rem; margin-bottom: 50px; border-bottom: 1px solid #ddd; padding-bottom: 20px;" class="reveal">Ibadah Minggu</h2>
+                
+                <div class="schedule-item reveal delay-100">
+                    <div class="schedule-time">09:00</div>
+                    <div class="schedule-detail">
+                        <h3>Ibadah Raya Jemaat</h3>
+                        <p>Ibadah umum untuk seluruh warga jemaat. Mari memuji nama Tuhan bersama-sama.</p>
+                    </div>
+                    <div><span class="schedule-tag">Gedung Gereja</span></div>
+                </div>
+
+                <div class="schedule-item reveal delay-200">
+                    <div class="schedule-time">09:00</div>
+                    <div class="schedule-detail">
+                        <h3>Sekolah Minggu (SAMP)</h3>
+                        <p>Ibadah khusus untuk anak-anak dan remaja (Sektor masing-masing).</p>
+                    </div>
+                    <div><span class="schedule-tag">Sektor / Gedung</span></div>
+                </div>
+
+                <h2 style="font-size: 2.5rem; margin-top: 100px; margin-bottom: 50px; border-bottom: 1px solid #ddd; padding-bottom: 20px;" class="reveal">Wadah Kategorial</h2>
+
+                <div class="schedule-item reveal delay-100">
+                    <div class="schedule-time">Bapak</div>
+                    <div class="schedule-detail">
+                        <h3>Pelayanan Laki-laki</h3>
+                        <p>Persekutuan bagi kaum bapak untuk menguatkan peran sebagai imam keluarga.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item reveal delay-200">
+                    <div class="schedule-time">Ibu</div>
+                    <div class="schedule-detail">
+                        <h3>Pelayanan Perempuan</h3>
+                        <p>Wadah kaum ibu untuk bertumbuh dan melayani di tengah gereja dan keluarga.</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item reveal delay-300">
+                    <div class="schedule-time">AMGPM</div>
+                    <div class="schedule-detail">
+                        <h3>Angkatan Muda</h3>
+                        <p>Wadah bagi pemuda-pemudi gereja berkarya bagi kemuliaan Tuhan.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <h3>GPM Syaloom Waimahu</h3>
-                <p>Gereja Protestan Maluku (GPM) yang melayani jemaat di Waimahu dengan penuh kasih.</p>
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <div class="footer-brand">Syaloom<span class="logo-dot">.</span></div>
+                    <p style="color: rgba(255,255,255,0.6); max-width: 300px;">Gereja Protestan Maluku Jemaat Waimahu. Hadir untuk melayani dengan kasih.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Navigasi</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Beranda</a>
+                        <a href="about.html">Tentang</a>
+                        <a href="services.html">Ibadah</a>
+                        <a href="contact.html">Kontak</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Kunjungi Kami</h4>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.8;">Waimahu, Kec. Nusaniwe<br>Kota Ambon, Maluku<br>(0911) 123456</p>
+                </div>
             </div>
-            
-            <div class="footer-links-wrapper">
-                <h4 class="footer-title">Tautan Cepat</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="about.html">Tentang Kami</a></li>
-                    <li><a href="services.html">Jadwal Ibadah</a></li>
-                    <li><a href="contact.html">Hubungi Kami</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-contact-wrapper">
-                <h4 class="footer-title">Informasi Kontak</h4>
-                <ul class="footer-contact">
-                    <li>
-                        <i data-lucide="map-pin"></i>
-                        <span>Waimahu, Kec. Nusaniwe, Kota Ambon, Maluku</span>
-                    </li>
-                    <li>
-                        <i data-lucide="phone"></i>
-                        <span>(0911) 123456</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 GPM Syaloom Waimahu. Hak Cipta Dilindungi.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GPM Syaloom Waimahu.</p>
             </div>
         </div>
     </footer>

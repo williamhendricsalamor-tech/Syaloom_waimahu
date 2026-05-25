@@ -18,30 +18,36 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileBtn.addEventListener('click', () => {
       navLinks.classList.toggle('active');
       const isExpanded = navLinks.classList.contains('active');
-      mobileBtn.innerHTML = isExpanded ? '<i class="lucide-x"></i>' : '<i class="lucide-menu"></i>';
+      mobileBtn.innerHTML = isExpanded ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
       
-      // We will re-render lucide icons if we are using them via script
+      // Re-render lucide icons
       if (typeof lucide !== 'undefined') {
         lucide.createIcons();
       }
     });
   }
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
-        }
-        window.scrollTo({
-          top: target.offsetTop - 80,
-          behavior: 'smooth'
-        });
+  // Intersection Observer for Scroll Reveal Animations
+  const revealElements = document.querySelectorAll('.reveal');
+  
+  const revealOptions = {
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
+      } else {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
       }
     });
+  }, revealOptions);
+
+  revealElements.forEach(el => {
+    revealOnScroll.observe(el);
   });
 
   // Initialize Lucide Icons

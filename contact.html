@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hubungi Gereja Protestan Maluku (GPM) Syaloom Waimahu. Informasi lokasi dan kontak.">
-    <title>Kontak Kami - GPM Syaloom Waimahu</title>
+    <meta name="description" content="Hubungi Gereja Protestan Maluku (GPM) Syaloom Waimahu.">
+    <title>Kontak - GPM Syaloom Waimahu</title>
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -12,245 +12,133 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .page-hero {
-            height: 40vh;
-            min-height: 300px;
-            background: linear-gradient(rgba(13, 44, 84, 0.8), rgba(13, 44, 84, 0.8)), url('images/hero-bg.png') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .page-header {
+            padding: 200px 0 100px;
             text-align: center;
-            color: white;
-            margin-top: 70px;
         }
         
-        .page-title {
-            font-size: 3rem;
-            animation: fadeInDown 0.8s ease;
-        }
-
-        .contact-content {
-            padding: 80px 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-
-        .contact-info h2 {
-            font-size: 2.5rem;
+        .page-header h1 {
+            font-size: clamp(3rem, 7vw, 6rem);
             margin-bottom: 20px;
         }
 
-        .contact-info p {
-            color: var(--text-muted);
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10vw;
+            align-items: start;
+        }
+
+        .contact-detail-item {
             margin-bottom: 40px;
-            font-size: 1.1rem;
         }
 
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .info-icon {
-            width: 50px;
-            height: 50px;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .info-text h4 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
-        .info-text p {
-            margin-bottom: 0;
+        .contact-detail-item h4 {
             font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 10px;
         }
 
-        .contact-form {
-            background: var(--bg-color);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            font-family: 'Outfit', sans-serif;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
-        }
-
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-
-        .btn-submit {
-            width: 100%;
-            border: none;
-            font-size: 1.1rem;
-            padding: 15px;
+        .contact-detail-item p {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            font-family: var(--font-heading);
         }
 
         @media (max-width: 768px) {
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
+            .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Header -->
     <header>
         <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <i data-lucide="church"></i>
-                GPM <span>Syaloom</span> Waimahu
-            </a>
-            
-            <button class="mobile-menu-btn">
-                <i data-lucide="menu"></i>
-            </button>
-
+            <a href="index.html" class="logo">Syaloom<span class="logo-dot">.</span></a>
+            <button class="mobile-menu-btn"><i data-lucide="menu"></i></button>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Beranda</a></li>
-                    <li><a href="about.html">Tentang Kami</a></li>
-                    <li><a href="services.html">Jadwal Ibadah</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="services.html">Ibadah</a></li>
                     <li><a href="contact.html" class="active">Kontak</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <div class="page-hero">
-        <h1 class="page-title">Hubungi Kami</h1>
+    <!-- Content -->
+    <div class="container">
+        <div class="page-header reveal">
+            <h1>Sapa Kami.</h1>
+        </div>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="contact-grid">
+                
+                <div class="reveal delay-100">
+                    <div class="contact-detail-item">
+                        <h4>Lokasi</h4>
+                        <p>Waimahu, Kecamatan Nusaniwe<br>Kota Ambon, Maluku.</p>
+                    </div>
+                    
+                    <div class="contact-detail-item">
+                        <h4>Telepon</h4>
+                        <p>(0911) 123456</p>
+                    </div>
+
+                    <div class="contact-detail-item">
+                        <h4>Email</h4>
+                        <p>hello@syaloom-waimahu.gpm.org</p>
+                    </div>
+                </div>
+
+                <div class="minimal-form reveal delay-200">
+                    <form onsubmit="event.preventDefault(); alert('Pesan Anda terkirim dengan kedamaian.');">
+                        <div class="form-row">
+                            <input type="text" class="minimal-input" placeholder="Nama Anda" required>
+                        </div>
+                        <div class="form-row">
+                            <input type="email" class="minimal-input" placeholder="Alamat Email" required>
+                        </div>
+                        <div class="form-row">
+                            <textarea class="minimal-input" placeholder="Apa yang ingin Anda sampaikan?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark" style="width: 100%; margin-top: 20px;">Kirim Pesan</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
     </div>
-
-    <!-- Contact Content -->
-    <section class="contact-content container">
-        <div class="contact-info">
-            <h2>Tetap Terhubung</h2>
-            <p>Kami selalu terbuka untuk mendengar dari Anda. Jika ada pertanyaan seputar jadwal ibadah, pelayanan, atau membutuhkan dukungan doa, jangan ragu untuk menghubungi kami.</p>
-
-            <div class="info-item">
-                <div class="info-icon">
-                    <i data-lucide="map-pin"></i>
-                </div>
-                <div class="info-text">
-                    <h4>Alamat Gereja</h4>
-                    <p>Jemaat GPM Syaloom Waimahu<br>Kecamatan Nusaniwe, Kota Ambon<br>Maluku, Indonesia</p>
-                </div>
-            </div>
-
-            <div class="info-item">
-                <div class="info-icon">
-                    <i data-lucide="phone"></i>
-                </div>
-                <div class="info-text">
-                    <h4>Nomor Telepon</h4>
-                    <p>(0911) 123456</p>
-                </div>
-            </div>
-
-            <div class="info-item">
-                <div class="info-icon">
-                    <i data-lucide="mail"></i>
-                </div>
-                <div class="info-text">
-                    <h4>Email</h4>
-                    <p>info@syaloom-waimahu.gpm.org</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="contact-form">
-            <h3 style="margin-bottom: 30px; font-size: 1.8rem; font-family: 'Playfair Display', serif;">Kirim Pesan</h3>
-            <form onsubmit="event.preventDefault(); alert('Pesan berhasil dikirim! Terima kasih.');">
-                <div class="form-group">
-                    <label for="name">Nama Lengkap</label>
-                    <input type="text" id="name" placeholder="Masukkan nama Anda" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Alamat Email</label>
-                    <input type="email" id="email" placeholder="Masukkan email Anda" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Pesan / Permohonan Doa</label>
-                    <textarea id="message" placeholder="Tuliskan pesan atau pokok doa Anda di sini..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-submit">Kirim Pesan</button>
-            </form>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <h3>GPM Syaloom Waimahu</h3>
-                <p>Gereja Protestan Maluku (GPM) yang melayani jemaat di Waimahu dengan penuh kasih.</p>
+        <div class="container">
+            <div class="footer-top">
+                <div>
+                    <div class="footer-brand">Syaloom<span class="logo-dot">.</span></div>
+                    <p style="color: rgba(255,255,255,0.6); max-width: 300px;">Gereja Protestan Maluku Jemaat Waimahu. Hadir untuk melayani dengan kasih.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Navigasi</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Beranda</a>
+                        <a href="about.html">Tentang</a>
+                        <a href="services.html">Ibadah</a>
+                        <a href="contact.html">Kontak</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Kunjungi Kami</h4>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.8;">Waimahu, Kec. Nusaniwe<br>Kota Ambon, Maluku<br>(0911) 123456</p>
+                </div>
             </div>
-            
-            <div class="footer-links-wrapper">
-                <h4 class="footer-title">Tautan Cepat</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="about.html">Tentang Kami</a></li>
-                    <li><a href="services.html">Jadwal Ibadah</a></li>
-                    <li><a href="contact.html">Hubungi Kami</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-contact-wrapper">
-                <h4 class="footer-title">Informasi Kontak</h4>
-                <ul class="footer-contact">
-                    <li>
-                        <i data-lucide="map-pin"></i>
-                        <span>Waimahu, Kec. Nusaniwe, Kota Ambon, Maluku</span>
-                    </li>
-                    <li>
-                        <i data-lucide="phone"></i>
-                        <span>(0911) 123456</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 GPM Syaloom Waimahu. Hak Cipta Dilindungi.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GPM Syaloom Waimahu.</p>
             </div>
         </div>
     </footer>
