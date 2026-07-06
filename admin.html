@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Syaloom Waimahu</title>
+    <title>Admin Panel - Jemaat GPM Waimahu</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { background-color: #f8fafc; }
+        body {
+            background-color: #f8fafc;
+        }
+
         .admin-container {
             max-width: 1000px;
             margin: 40px auto;
             padding: 20px;
             background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
+
         .admin-header {
             display: flex;
             justify-content: space-between;
@@ -24,24 +29,28 @@
             padding-bottom: 20px;
             margin-bottom: 20px;
         }
+
         .login-wrapper {
             max-width: 400px;
             margin: 100px auto;
             padding: 40px;
             background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             text-align: center;
         }
+
         .form-group {
             margin-bottom: 15px;
             text-align: left;
         }
+
         .form-group label {
             display: block;
             margin-bottom: 5px;
             font-weight: 500;
         }
+
         .form-control {
             width: 100%;
             padding: 10px 15px;
@@ -49,19 +58,24 @@
             border-radius: 6px;
             font-size: 1rem;
         }
-        .dashboard-section { display: none; }
-        
+
+        .dashboard-section {
+            display: none;
+        }
+
         .news-form {
             background: #f1f5f9;
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 30px;
         }
+
         .news-list {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
+
         .news-item {
             display: flex;
             justify-content: space-between;
@@ -71,8 +85,17 @@
             border-radius: 8px;
             background: #fff;
         }
-        .news-item-details h4 { margin: 0 0 5px 0; }
-        .news-item-details p { margin: 0; font-size: 0.9rem; color: #64748b; }
+
+        .news-item-details h4 {
+            margin: 0 0 5px 0;
+        }
+
+        .news-item-details p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
         .btn-danger {
             background: #ef4444;
             color: #fff;
@@ -81,17 +104,30 @@
             border-radius: 6px;
             cursor: pointer;
         }
-        .btn-danger:hover { background: #dc2626; }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
         .alert {
             padding: 10px;
             border-radius: 6px;
             margin-bottom: 15px;
             display: none;
         }
-        .alert-success { background: #dcfce7; color: #166534; }
-        .alert-error { background: #fee2e2; color: #991b1b; }
+
+        .alert-success {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .alert-error {
+            background: #fee2e2;
+            color: #991b1b;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Login Section -->
@@ -99,7 +135,7 @@
         <img src="images/Logo_Gereja_Protestan_Maluku.jpg" alt="Logo" style="height: 60px; margin-bottom: 15px;">
         <h3>Admin Login</h3>
         <p style="color: #64748b; margin-bottom: 20px;">Silakan login untuk mengelola berita.</p>
-        
+
         <div id="loginAlert" class="alert alert-error"></div>
 
         <form id="loginForm">
@@ -161,4 +197,5 @@
         lucide.createIcons();
     </script>
 </body>
+
 </html>
