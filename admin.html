@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Syaloom Waimahu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { background-color: #f8fafc; }
+        .admin-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .login-wrapper {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        .dashboard-section { display: none; }
+        
+        .news-form {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .news-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #fff;
+        }
+        .news-item-details h4 { margin: 0 0 5px 0; }
+        .news-item-details p { margin: 0; font-size: 0.9rem; color: #64748b; }
+        .btn-danger {
+            background: #ef4444;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .btn-danger:hover { background: #dc2626; }
+        .alert {
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: none;
+        }
+        .alert-success { background: #dcfce7; color: #166534; }
+        .alert-error { background: #fee2e2; color: #991b1b; }
+    </style>
+</head>
+<body>
+
+    <!-- Login Section -->
+    <div id="loginSection" class="login-wrapper">
+        <img src="images/Logo_Gereja_Protestan_Maluku.jpg" alt="Logo" style="height: 60px; margin-bottom: 15px;">
+        <h3>Admin Login</h3>
+        <p style="color: #64748b; margin-bottom: 20px;">Silakan login untuk mengelola berita.</p>
+        
+        <div id="loginAlert" class="alert alert-error"></div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="username" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-dark" style="width: 100%; margin-top: 10px;">Login</button>
+        </form>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboardSection" class="admin-container dashboard-section">
+        <div class="admin-header">
+            <div>
+                <h2>Panel Pengelola Berita</h2>
+                <p>Syaloom Waimahu</p>
+            </div>
+            <button id="logoutBtn" class="btn btn-outline">
+                <i data-lucide="log-out" style="width:18px;height:18px;margin-right:5px;"></i> Logout
+            </button>
+        </div>
+
+        <div id="dashAlert" class="alert"></div>
+
+        <div class="news-form">
+            <h3>Tambah Berita / Pengumuman</h3>
+            <form id="newsForm">
+                <div class="form-group">
+                    <label>Judul</label>
+                    <input type="text" id="title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Isi Berita</label>
+                    <textarea id="content" class="form-control" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Media (Gambar/Video) - Opsional</label>
+                    <input type="file" id="media" class="form-control" accept="image/*,video/*">
+                </div>
+                <button type="submit" class="btn btn-dark" id="submitNewsBtn">Upload Berita</button>
+            </form>
+        </div>
+
+        <div>
+            <h3>Daftar Berita</h3>
+            <div id="newsList" class="news-list">
+                <p>Memuat berita...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
